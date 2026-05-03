@@ -1,15 +1,15 @@
 // main
-import i18n from "emcjs/util/I18n.js";
-import FileLoader from "emcjs/util/file/FileLoader.js";
-import CustomActionRegistry from "emcjs/data/registry/CustomActionRegistry.js";
-import LogicOperatorRegistry from "emcjs/data/registry/LogicOperatorRegistry.js";
-import OptionGroupRegistry from "emcjs-fe/data/registry/form/OptionGroupRegistry.js";
-import TokenRegistry from "emcjs-fe/data/registry/form/TokenRegistry.js";
-import ModalFormDialog from "emcjs-fe/ui/modal/ModalFormDialog.js";
-import "emcjs-fe/ui/Page.js";
+import i18n from "@emcjs/core/util/I18n.js";
+import FileLoader from "@emcjs/core/util/file/FileLoader.js";
+import CustomActionRegistry from "@emcjs/core/data/registry/CustomActionRegistry.js";
+import LogicOperatorRegistry from "@emcjs/core/data/registry/LogicOperatorRegistry.js";
+import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
+import TokenRegistry from "@emcjs/fe/data/registry/form/TokenRegistry.js";
+import ModalFormDialog from "@emcjs/fe/ui/modal/ModalFormDialog.js";
+import "@emcjs/fe/ui/Page.js";
 // form
-import FormBuilder from "emcjs-fe/util/form/FormBuilder.js";
-import FormContext from "emcjs-fe/util/form/context/FormContext.js";
+import FormBuilder from "@emcjs/fe/util/form/FormBuilder.js";
+import FormContext from "@emcjs/fe/util/form/context/FormContext.js";
 
 /*
        NOW                  |    BEFORE

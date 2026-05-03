@@ -1,9 +1,9 @@
-import FileLoader from "emcjs/util/file/FileLoader.js";
-import I18nOption from "emcjs-fe/ui/i18n/builtin/I18nOption.js";
-import "emcjs-fe/loader/FormComponentsLoader.js";
-import "emcjs-fe/ui/Page.js";
-import "emcjs-fe/ui/input/ListSelect.js";
-import "emcjs-fe/ui/input/Option.js";
+import FileLoader from "@emcjs/core/util/file/FileLoader.js";
+import I18nOption from "@emcjs/fe/ui/i18n/builtin/I18nOption.js";
+import "@emcjs/fe/loader/FormComponentsLoader.js";
+import "@emcjs/fe/ui/Page.js";
+import "@emcjs/fe/ui/input/ListSelect.js";
+import "@emcjs/fe/ui/input/Option.js";
 
 const data = await FileLoader.json(`./config.json`);
 

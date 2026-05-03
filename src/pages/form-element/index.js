@@ -1,18 +1,18 @@
 // main
-import FormElementRegistry from "emcjs-fe/data/registry/form/FormElementRegistry.js";
-import FormBuilder, {getFormConfig} from "emcjs-fe/util/form/FormBuilder.js";
-import {extractDefaultValuesFromConfig} from "emcjs-fe/util/form/ExtractDefaultValuesFromConfig.js";
-import {debounce} from "emcjs/util/Debouncer.js";
-import ModalDialogCodeInput from "emcjs-fe/ui/modal/input/ModalDialogCodeInput.js";
-import ModalDialog from "emcjs-fe/ui/modal/ModalDialog.js";
-import I18nOption from "emcjs-fe/ui/i18n/builtin/I18nOption.js";
-import Column from "emcjs-fe/ui/dataview/datagrid/Column.js";
-import "emcjs-fe/ui/Page.js";
-import "emcjs-fe/ui/container/CaptionPanel.js";
+import FormElementRegistry from "@emcjs/fe/data/registry/form/FormElementRegistry.js";
+import FormBuilder, {getFormConfig} from "@emcjs/fe/util/form/FormBuilder.js";
+import {extractDefaultValuesFromConfig} from "@emcjs/fe/util/form/ExtractDefaultValuesFromConfig.js";
+import {debounce} from "@emcjs/core/util/Debouncer.js";
+import ModalDialogCodeInput from "@emcjs/fe/ui/modal/input/ModalDialogCodeInput.js";
+import ModalDialog from "@emcjs/fe/ui/modal/ModalDialog.js";
+import I18nOption from "@emcjs/fe/ui/i18n/builtin/I18nOption.js";
+import Column from "@emcjs/fe/ui/dataview/datagrid/Column.js";
+import "@emcjs/fe/ui/Page.js";
+import "@emcjs/fe/ui/container/CaptionPanel.js";
 // form
-import FormContext from "emcjs-fe/util/form/context/FormContext.js";
-import "emcjs-fe/ui/form/FormContainer.js";
-import "emcjs-fe/loader/FormComponentsLoader.js";
+import FormContext from "@emcjs/fe/util/form/context/FormContext.js";
+import "@emcjs/fe/ui/form/FormContainer.js";
+import "@emcjs/fe/loader/FormComponentsLoader.js";
 
 const formContext = new FormContext();
 formContext.allowEnter = false;

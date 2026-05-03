@@ -1,5 +1,5 @@
-import "emcjs-fe/ui/form/button/Button.js";
-import ModalDialog from "emcjs-fe/ui/modal/ModalDialog.js";
+import "@emcjs/fe/ui/form/button/Button.js";
+import ModalDialog from "@emcjs/fe/ui/modal/ModalDialog.js";
 
 const promptEl = document.getElementById("prompt");
 const promptNumberEl = document.getElementById("prompt-number");

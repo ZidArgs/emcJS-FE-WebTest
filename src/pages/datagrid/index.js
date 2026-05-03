@@ -1,9 +1,9 @@
-import "emcjs-fe/ui/Page.js";
-import "emcjs-fe/ui/dataview/datagrid/DataGrid.js";
-import "emcjs-fe/ui/dataview/toolbar/DataViewControlToolbar.js";
-import i18n from "emcjs/util/I18n.js";
-import OptionGroupRegistry from "emcjs-fe/data/registry/form/OptionGroupRegistry.js";
-import RemoteDataProvider from "emcjs/util/dataprovider/RemoteDataProvider.js";
+import "@emcjs/fe/ui/Page.js";
+import "@emcjs/fe/ui/dataview/datagrid/DataGrid.js";
+import "@emcjs/fe/ui/dataview/toolbar/DataViewControlToolbar.js";
+import i18n from "@emcjs/core/util/I18n.js";
+import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
+import RemoteDataProvider from "@emcjs/core/util/dataprovider/RemoteDataProvider.js";
 
 (new OptionGroupRegistry("ImageSelect")).setAll({
     "": "",

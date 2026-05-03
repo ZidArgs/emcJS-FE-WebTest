@@ -1,7 +1,7 @@
-import HTMLTemplate from "emcjs-fe/util/template/HTMLTemplate.js";
-import CSSTemplate from "emcjs-fe/util/template/CSSTemplate.js";
-import {isArrayOf} from "emcjs/util/helper/CheckType.js";
-import {isEqual} from "emcjs/util/helper/Comparator.js";
+import HTMLTemplate from "@emcjs/fe/util/template/HTMLTemplate.js";
+import CSSTemplate from "@emcjs/fe/util/template/CSSTemplate.js";
+import {isArrayOf} from "@emcjs/core/util/helper/CheckType.js";
+import {isEqual} from "@emcjs/core/util/helper/Comparator.js";
 
 // TODO animate: https://stackoverflow.com/a/75983399
 // also move all elements between dragged and target

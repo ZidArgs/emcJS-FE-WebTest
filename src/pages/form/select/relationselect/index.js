@@ -1,7 +1,7 @@
-import TypeConfigMap from "emcjs/data/type/TypeConfigMap.js";
-import TypeStorage from "emcjs/data/type/TypeStorage.js";
-import CustomActionRegistry from "emcjs/data/registry/CustomActionRegistry.js";
-import Logger from "emcjs/util/log/Logger.js";
+import TypeConfigMap from "@emcjs/core/data/type/TypeConfigMap.js";
+import TypeStorage from "@emcjs/core/data/type/TypeStorage.js";
+import CustomActionRegistry from "@emcjs/core/data/registry/CustomActionRegistry.js";
+import Logger from "@emcjs/core/util/log/Logger.js";
 import {
     loadForm, init
 } from "../../util/formLoader.js";

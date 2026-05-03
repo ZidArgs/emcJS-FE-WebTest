@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
 import ServiceModule from "jswebservice/ServiceModule.js";
-import {extractData} from "emcjs/util/helper/collection/ExtractDataFromArray.js";
+import {extractData} from "@emcjs/core/util/helper/collection/ExtractDataFromArray.js";
 import {
     isArrayOf, isDict
-} from "emcjs/util/helper/CheckType.js";
-import jsonParse from "emcjs/patches/JSONParser.js";
+} from "@emcjs/core/util/helper/CheckType.js";
+import jsonParse from "@emcjs/core/patches/JSONParser.js";
 
 export default class DataProviderService extends ServiceModule {
 

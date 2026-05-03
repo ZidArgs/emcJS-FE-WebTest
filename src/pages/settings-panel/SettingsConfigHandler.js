@@ -1,5 +1,5 @@
-import {immute} from "emcjs/data/Immutable.js";
-import OptionGroupRegistry from "emcjs-fe/data/registry/form/OptionGroupRegistry.js";
+import {immute} from "@emcjs/core/data/Immutable.js";
+import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
 
 // TODO make SettingsConfigHandler react to changes to OptionGroupRegistry if a optiongroup has been used
 export default class SettingsConfigHandler {

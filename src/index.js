@@ -1,5 +1,5 @@
-import FileLoader from "emcjs/util/file/FileLoader.js";
-import "emcjs-fe/ui/form/button/LinkButton.js";
+import FileLoader from "@emcjs/core/util/file/FileLoader.js";
+import "@emcjs/fe/ui/form/button/LinkButton.js";
 
 const config = await FileLoader.json("./index.json");
 
@@ -109,7 +109,7 @@ function addPage(src) {
     frameEl.addEventListener("load", () => {
         // load default theme
         const defaultThemeLink = document.createElement("link");
-        defaultThemeLink.href = "/emcjs-fe/_style/index.css";
+        defaultThemeLink.href = "@emcjs/fe/_style/index.css";
         defaultThemeLink.rel = "stylesheet";
         defaultThemeLink.type = "text/css";
         frameEl.contentDocument.head.appendChild(defaultThemeLink);

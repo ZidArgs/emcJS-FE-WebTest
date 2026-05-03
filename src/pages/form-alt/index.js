@@ -1,14 +1,14 @@
 // main
-import ModalDialog from "emcjs-fe/ui/modal/ModalDialog.js";
-import SectionTreeManager from "emcjs-fe/util/form/manager/SectionTreeManager.js";
-import "emcjs-fe/ui/Page.js";
-import "emcjs-fe/ui/tree/Tree.js";
+import ModalDialog from "@emcjs/fe/ui/modal/ModalDialog.js";
+import SectionTreeManager from "@emcjs/fe/util/form/manager/SectionTreeManager.js";
+import "@emcjs/fe/ui/Page.js";
+import "@emcjs/fe/ui/tree/Tree.js";
 // form
-import OptionGroupRegistryChoiceManager from "emcjs-fe/util/form/manager/OptionGroupRegistryChoiceManager.js";
-import FormContext from "emcjs-fe/util/form/context/FormContext.js";
-import FormErrorButtonManager from "emcjs-fe/util/form/manager/errorbutton/FormErrorButtonManager.js";
-import "emcjs-fe/ui/form/FormContainer.js";
-import "emcjs-fe/loader/FormComponentsLoader.js";
+import OptionGroupRegistryChoiceManager from "@emcjs/fe/util/form/manager/OptionGroupRegistryChoiceManager.js";
+import FormContext from "@emcjs/fe/util/form/context/FormContext.js";
+import FormErrorButtonManager from "@emcjs/fe/util/form/manager/errorbutton/FormErrorButtonManager.js";
+import "@emcjs/fe/ui/form/FormContainer.js";
+import "@emcjs/fe/loader/FormComponentsLoader.js";
 import {init} from "../form/util/formLoader.js";
 
 await init();

@@ -1,15 +1,15 @@
 // main
-import i18n from "emcjs/util/I18n.js";
-import FileLoader from "emcjs/util/file/FileLoader.js";
-import OptionGroupRegistry from "emcjs-fe/data/registry/form/OptionGroupRegistry.js";
-import TokenRegistry from "emcjs-fe/data/registry/form/TokenRegistry.js";
-import LogicOperatorRegistry from "emcjs/data/registry/LogicOperatorRegistry.js";
-import {deepClone} from "emcjs/util/helper/DeepClone.js";
-import "emcjs-fe/ui/Page.js";
+import i18n from "@emcjs/core/util/I18n.js";
+import FileLoader from "@emcjs/core/util/file/FileLoader.js";
+import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
+import TokenRegistry from "@emcjs/fe/data/registry/form/TokenRegistry.js";
+import LogicOperatorRegistry from "@emcjs/core/data/registry/LogicOperatorRegistry.js";
+import {deepClone} from "@emcjs/core/util/helper/DeepClone.js";
+import "@emcjs/fe/ui/Page.js";
 // form
-import FormBuilder from "emcjs-fe/util/form/FormBuilder.js";
-import FormContext from "emcjs-fe/util/form/context/FormContext.js";
-import "emcjs-fe/loader/FormComponentsLoader.js";
+import FormBuilder from "@emcjs/fe/util/form/FormBuilder.js";
+import FormContext from "@emcjs/fe/util/form/context/FormContext.js";
+import "@emcjs/fe/loader/FormComponentsLoader.js";
 
 let initFlag = false;
 

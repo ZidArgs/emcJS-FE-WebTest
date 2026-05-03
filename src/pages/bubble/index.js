@@ -1,1 +1,1 @@
-import "emcjs-fe/ui/bubble/Bubble.js";
+import "@emcjs/fe/ui/bubble/Bubble.js";

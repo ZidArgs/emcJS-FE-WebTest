@@ -7,8 +7,8 @@ const port = process.argv.indexOf("-port") >= 1 ? process.argv[process.argv.inde
 
 const service = new WebService(port, {enableCors});
 service.registerServiceModule(StaticService, "", {serveFolder: "./src"});
-service.registerServiceModule(StaticService, "/emcjs", {serveFolder: "./node_modules/emcjs/lib"});
-service.registerServiceModule(StaticService, "/emcjs-fe", {serveFolder: "./node_modules/emcjs-fe/lib"});
+service.registerServiceModule(StaticService, "/dep/emcjs/core", {serveFolder: "./node_modules/@emcjs/core/lib"});
+service.registerServiceModule(StaticService, "/dep/emcjs/fe", {serveFolder: "./node_modules/@emcjs/fe/lib"});
 service.registerServiceModule(DataProviderService, "/api/data/simple", {dataSource: "./server/data/SimpleData.json"});
 service.registerServiceModule(DataProviderService, "/api/data/large", {dataSource: "./server/data/LargeData.json"});
 
