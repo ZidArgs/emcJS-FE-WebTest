@@ -107,12 +107,12 @@ function addEntry(containerEl, src, {
 function addPage(src) {
     const frameEl = document.createElement("object");
     frameEl.addEventListener("load", () => {
-        // load default theme
-        const defaultThemeLink = document.createElement("link");
-        defaultThemeLink.href = "@emcjs/fe/_style/index.css";
-        defaultThemeLink.rel = "stylesheet";
-        defaultThemeLink.type = "text/css";
-        frameEl.contentDocument.head.appendChild(defaultThemeLink);
+        // load default style
+        const defaultStyleLink = document.createElement("link");
+        defaultStyleLink.href = "/dep/emcjs/fe/_style/index.css";
+        defaultStyleLink.rel = "stylesheet";
+        defaultStyleLink.type = "text/css";
+        frameEl.contentDocument.head.appendChild(defaultStyleLink);
         // load override theme
         const overrideThemeLink = document.createElement("link");
         overrideThemeLink.href = "/theme.css";
