@@ -109,7 +109,7 @@ function addPage(src) {
     frameEl.addEventListener("load", () => {
         // load default style
         const defaultStyleLink = document.createElement("link");
-        defaultStyleLink.href = "/dep/emcjs/fe/_style/index.css";
+        defaultStyleLink.href = "/_libs/emcjs/fe/_style/index.css";
         defaultStyleLink.rel = "stylesheet";
         defaultStyleLink.type = "text/css";
         frameEl.contentDocument.head.appendChild(defaultStyleLink);
