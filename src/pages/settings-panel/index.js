@@ -1,7 +1,7 @@
 import FileLoader from "@emcjs/core/util/file/FileLoader.js";
 import SettingsOverlay from "@emcjs/fe/ui/settings/SettingsOverlay.js";
 import ObservableStorage from "@emcjs/core/data/storage/observable/ObservableStorage.js";
-import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
+import OptionGroupRegistry from "@emcjs/fe/registry/form/OptionGroupRegistry.js";
 import HotkeyHandler from "@emcjs/core/util/HotkeyHandler.js";
 import KeySequence from "@emcjs/core/util/keyboard/KeySequence.js";
 import "@emcjs/fe/ui/Page.js";

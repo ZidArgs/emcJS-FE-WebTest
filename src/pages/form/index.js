@@ -1,10 +1,10 @@
 // main
 import i18n from "@emcjs/core/util/I18n.js";
 import FileLoader from "@emcjs/core/util/file/FileLoader.js";
-import CustomActionRegistry from "@emcjs/core/data/registry/CustomActionRegistry.js";
-import LogicOperatorRegistry from "@emcjs/core/data/registry/LogicOperatorRegistry.js";
-import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
-import TokenRegistry from "@emcjs/fe/data/registry/form/TokenRegistry.js";
+import CustomActionRegistry from "@emcjs/core/registry/CustomActionRegistry.js";
+import LogicOperatorRegistry from "@emcjs/core/registry/LogicOperatorRegistry.js";
+import OptionGroupRegistry from "@emcjs/fe/registry/form/OptionGroupRegistry.js";
+import TokenRegistry from "@emcjs/fe/registry/form/TokenRegistry.js";
 import ModalFormDialog from "@emcjs/fe/ui/modal/ModalFormDialog.js";
 import "@emcjs/fe/ui/Page.js";
 // form

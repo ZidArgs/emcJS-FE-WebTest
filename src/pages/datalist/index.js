@@ -2,7 +2,7 @@
 import "@emcjs/fe/ui/Page.js";
 import "@emcjs/fe/ui/dataview/datalist/DataList.js";
 import i18n from "@emcjs/core/util/I18n.js";
-import OptionGroupRegistry from "@emcjs/fe/data/registry/form/OptionGroupRegistry.js";
+import OptionGroupRegistry from "@emcjs/fe/registry/form/OptionGroupRegistry.js";
 import RemoteDataProvider from "@emcjs/core/util/dataprovider/RemoteDataProvider.js";
 
 (new OptionGroupRegistry("ImageSelect")).setAll({

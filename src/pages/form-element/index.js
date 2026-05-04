@@ -1,5 +1,5 @@
 // main
-import FormElementRegistry from "@emcjs/fe/data/registry/form/FormElementRegistry.js";
+import FormElementRegistry from "@emcjs/fe/registry/form/FormElementRegistry.js";
 import FormBuilder, {getFormConfig} from "@emcjs/fe/util/form/FormBuilder.js";
 import {extractDefaultValuesFromConfig} from "@emcjs/fe/util/form/ExtractDefaultValuesFromConfig.js";
 import {debounce} from "@emcjs/core/util/Debouncer.js";
