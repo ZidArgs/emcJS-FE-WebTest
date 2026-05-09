@@ -11,9 +11,9 @@
   "license": "MIT",
   "homepage": "https://github.com/ZidArgs/emcJS-FE",
   "dependencies": {
-    "@emcjs/core": "https://github.com/ZidArgs/emcJS-Core.git/#1.0.6",
-    "@emcjs/fe": "https://github.com/ZidArgs/emcJS-FE.git/#0.0.7",
-    "jswebservice": "git+https://bitbucket.org/zidargs/jswebservice.git/#3.1.2"
+    "@emcjs/core": "https://github.com/ZidArgs/emcJS-Core.git/#1.0.7",
+    "@emcjs/fe": "https://github.com/ZidArgs/emcJS-FE.git/#0.0.9",
+    "jswebservice": "git+https://bitbucket.org/zidargs/jswebservice.git/#3.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
