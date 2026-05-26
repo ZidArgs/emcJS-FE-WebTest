@@ -6,9 +6,8 @@ const enableCors = process.argv.indexOf("-cors") >= 1;
 const port = process.argv.indexOf("-port") >= 1 ? process.argv[process.argv.indexOf("-port") + 1] : "12000";
 
 const service = new WebService(port, {enableCors});
-service.registerServiceModule(StaticService, "", {serveFolder: "./src"});
-service.registerServiceModule(StaticService, "/_libs/emcjs/core", {serveFolder: "./node_modules/@emcjs/core/lib"});
-service.registerServiceModule(StaticService, "/_libs/emcjs/fe", {serveFolder: "./node_modules/@emcjs/fe/lib"});
+service.registerServiceModule(StaticService, "", {serveFolder: "./dist"});
+service.registerServiceModule(StaticService, "/.well-known", {serveFolder: "./src/.well-known"});
 service.registerServiceModule(DataProviderService, "/api/data/simple", {dataSource: "./server/data/SimpleData.json"});
 service.registerServiceModule(DataProviderService, "/api/data/large", {dataSource: "./server/data/LargeData.json"});
 

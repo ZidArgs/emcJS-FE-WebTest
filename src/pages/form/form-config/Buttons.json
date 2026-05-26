@@ -22,23 +22,23 @@
             "text": "soup",
             "icon": "🍲",
             "action": "soup",
-            "disabled": true,
-            "tooltip": "invisible if search-select default is empty",
-            "visible": {
-                "type": "not",
-                "content": {
-                    "type": "state",
-                    "content": "search-select.default",
-                    "value": ""
-                }
-            }
+            "disabled": true
         },
         {
             "type": "ActionButton",
             "name": "button.action",
             "text": "cheese",
             "icon": "🧀",
-            "action": "cheese"
+            "action": "cheese",
+            "tooltip": "invisible if search-select default is empty",
+            "visible": {
+                "type": "not",
+                "content": {
+                    "type": "state",
+                    "ref": "search-select.default",
+                    "value": ""
+                }
+            }
         }
     ]
 }
