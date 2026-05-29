@@ -1,0 +1,19 @@
+{
+    "type": "Fieldset",
+    "label": "file",
+    "children": [
+        {
+            "type": "FileInput",
+            "label": "file default",
+            "name": "file.default",
+            "id": "file"
+        },
+        {
+            "type": "FileInput",
+            "label": "file multiple",
+            "name": "file.multiple",
+            "id": "fileMultiple",
+            "multiple": true
+        }
+    ]
+}

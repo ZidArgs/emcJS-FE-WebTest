@@ -35,6 +35,9 @@
             "buttons": {
                 "label": "Buttons"
             },
+            "input/file": {
+                "label": "File"
+            },
             "input/boolorlogic": {
                 "label": "BoolOrLogicInput"
             },
