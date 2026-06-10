@@ -12,7 +12,7 @@ const fileMultipleEl = document.getElementById("fileMultiple");
 formContext.addEventListener("submit", () => {
     const singleFile = fileEl.files[0];
     if (singleFile) {
-        fileUploader.upload(singleFile);
+        fileUploader.uploadRaw(singleFile);
     }
     const multiFile = fileMultipleEl.files;
     if (multiFile.length) {
