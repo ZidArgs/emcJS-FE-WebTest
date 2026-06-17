@@ -96,7 +96,7 @@ export async function init() {
     ]);
 
     // SETTINGS
-    const settingsConfigHandler = new SettingsConfigHandler(settings, (label) => `setting[${label}]`);
+    const settingsConfigHandler = new SettingsConfigHandler(settings, {getLabel: (label) => `setting[${label}]`});
     window.settingsConfig = settingsConfigHandler;
     settingsOverlayEl.loadConfig(settingsConfigHandler.config, settingsConfigHandler.defaultValues);
 
@@ -108,7 +108,7 @@ export async function init() {
     });
 
     // OPTIONS
-    const optionsConfigHandler = new SettingsConfigHandler(options, (label) => `option[${label}]`);
+    const optionsConfigHandler = new SettingsConfigHandler(options, {getLabel: (label) => `option[${label}]`});
     window.optionsConfig = optionsConfigHandler;
     optionsOverlayEl.loadConfig(optionsConfigHandler.config, optionsConfigHandler.defaultValues);
 
