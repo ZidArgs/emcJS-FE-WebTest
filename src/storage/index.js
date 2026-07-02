@@ -6,14 +6,15 @@ const inputEl = document.getElementById("input");
 const writeEl = document.getElementById("write");
 const readEl = document.getElementById("read");
 
-const FILENAME = "TEST/FOOBAR";
+const NAMESPACE = "TEST";
+const FILENAME = "FOOBAR";
 
 window.listOPFSContents = async function() {
     console.log("OPFS", await getDirectoryContents());
 };
 
 writeEl.addEventListener("click", async () => {
-    await writeData(FILENAME, {
+    await writeData(NAMESPACE, FILENAME, {
         value: inputEl.value,
         timestamp: new Date()
     });
@@ -21,6 +22,6 @@ writeEl.addEventListener("click", async () => {
 });
 
 readEl.addEventListener("click", async () => {
-    const data = await readData(FILENAME);
+    const data = await readData(NAMESPACE, FILENAME);
     console.log(data);
 });

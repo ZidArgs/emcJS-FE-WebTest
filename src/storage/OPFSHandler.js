@@ -4,53 +4,57 @@ import jsonParse from "@emcjs/core/patches/JSONParser.js";
 
 const rootDirHandle = await navigator.storage.getDirectory();
 
-async function createNamespace(name) {
-    if (typeof name !== "string" || !name.test(/[a-z0-9]+/i)) {
-        throw new TypeError("Failed to create namespace: Name is not allowed.");
-    }
-    return await rootDirHandle.getDirectoryHandle(name, {create: true});
-}
+const NAME_PATTERN = /[a-z0-9]+/i;
 
 export async function writeData(namespace, filename, data) {
-    const namespaceHandle = await createNamespace(name);
-    try {
-        const fileHandle = await namespaceHandle.getFileHandle(filename + ".json", {create: true});
-        const writable = await fileHandle.createWritable();
-        await writable.write(JSON.stringify(data));
-        await writable.close();
-    } catch {
-        // ignore
+    if (typeof name !== "string" || !NAME_PATTERN.test(namespace)) {
+        throw new TypeError("Failed to create namespace: Namespace does not match pattern [a-zA-Z0-9].");
     }
+    const namespaceHandle = await rootDirHandle.getDirectoryHandle(namespace, {create: true});
+    if (typeof filename !== "string" || !NAME_PATTERN.test(filename)) {
+        throw new TypeError("Failed to create file handle: Filename does not match pattern [a-zA-Z0-9].");
+    }
+    const fileHandle = await namespaceHandle.getFileHandle(filename + ".json", {create: true});
+    const writable = await fileHandle.createWritable();
+    await writable.write(JSON.stringify(data));
+    await writable.close();
 }
 
 export async function readData(namespace, filename) {
-    const namespaceHandle = await createNamespace(name);
-    try {
-        const fileHandle = await namespaceHandle.getFileHandle(filename + ".json");
-        const file = await fileHandle.getFile();
-        const data = await file.text();
-        return jsonParse(data);
-    } catch {
-        // ignore
+    if (typeof name !== "string" || !NAME_PATTERN.test(namespace)) {
+        throw new TypeError("Failed to retrieve namespace: Namespace does not match pattern [a-zA-Z0-9].");
     }
+    const namespaceHandle = await rootDirHandle.getDirectoryHandle(namespace);
+    if (typeof filename !== "string" || !NAME_PATTERN.test(filename)) {
+        throw new TypeError("Failed to retrieve file handle: Filename does not match pattern [a-zA-Z0-9].");
+    }
+    const fileHandle = await namespaceHandle.getFileHandle(filename + ".json");
+    const file = await fileHandle.getFile();
+    const data = await file.text();
+    return jsonParse(data);
 }
 
 export async function removeData(namespace, filename) {
-    try {
-        const namespaceHandle = await rootDirHandle.getDirectoryHandle(name);
-        await namespaceHandle.removeEntry(filename + ".json");
-    } catch {
-        // ignore
+    if (typeof name !== "string" || !NAME_PATTERN.test(namespace)) {
+        throw new TypeError("Failed to retrieve namespace: Namespace does not match pattern [a-zA-Z0-9].");
     }
+    const namespaceHandle = await rootDirHandle.getDirectoryHandle(namespace);
+    if (typeof filename !== "string" || !NAME_PATTERN.test(filename)) {
+        throw new TypeError("Failed to delete file: Filename does not match pattern [a-zA-Z0-9].");
+    }
+    await namespaceHandle.removeEntry(filename + ".json");
 }
 
-export async function getDirectoryContents(directoryHandle) {
-    directoryHandle = directoryHandle || rootDirHandle;
+export function getDirectoryContents() {
+    return getDirectoryContentsInternal();
+}
+
+async function getDirectoryContentsInternal(directoryHandle = rootDirHandle) {
     const result = {};
     const entries = await directoryHandle.values();
     for await (const entry of entries) {
         if (entry.kind === "directory") {
-            result[entry.name] = await getDirectoryContents(entry);
+            result[entry.name] = await getDirectoryContentsInternal(entry);
         } else {
             result[entry.name] = true;
         }
