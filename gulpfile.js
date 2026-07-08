@@ -11,6 +11,7 @@ import {mergeStream} from "@zidargs/buildtools/util/MergeStream.js";
 import {packScript} from "@zidargs/buildtools/PackScript.js";
 import SourceImport from "@zidargs/buildtools/SourceImport.js";
 import InjectImportMap from "@zidargs/buildtools/InjectImportMap.js";
+import InjectAssets from "@zidargs/buildtools/InjectAssets.js";
 import "@emcjs/fe/_build_tools/RegisterImportHandlers.js";
 
 const __dirname = path.resolve();
@@ -21,6 +22,9 @@ const SRC_PATH = path.resolve(__dirname, "src");
 const OUT_PATH = path.resolve(__dirname, "dist");
 
 const DEPENDENCIES = readJSONFile(path.resolve(__dirname, "build_dependencies.json"));
+
+InjectAssets.addStyle("theme", "/_libs/emcjs/fe/_style/index.css");
+InjectAssets.addStyle("theme", "/theme.css");
 
 /* configuration */
 const DELETE_UNUSED_FILES = process.argv.indexOf("-nodelete") < 0;
@@ -168,6 +172,7 @@ function copyHTML() {
     let res = gulp.src(FILES);
     res = res.pipe(FileIndex.register(SRC_PATH, OUT_PATH));
     res = res.pipe(InjectImportMap.inject());
+    res = res.pipe(InjectAssets.inject());
     if (!REBUILD) {
         res = res.pipe(changed(OUT_PATH, {hasChanged: compareContents}));
     }
