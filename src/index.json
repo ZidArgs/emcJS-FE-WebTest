@@ -2,6 +2,9 @@
     "prestyle-test": {
         "label": "Prestyle Test"
     },
+    "image-crop": {
+        "label": "Image Crop"
+    },
     "settings-panel": {
         "label": "Settings Panel"
     },
