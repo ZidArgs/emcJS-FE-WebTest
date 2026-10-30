@@ -44,8 +44,8 @@ export default class DataProviderService extends ServiceModule {
         this.logger.log(`Requested data not found: "${filePath}"`);
     }
 
-    async onrequest(request/* , params */) {
-        if (request.method == "POST") {
+    async onrequest(request, response/* , params */) {
+        if (request.method === "QUERY") {
             const {
                 sort, page, pageSize, filter
             } = await request.resolveBody();
@@ -74,10 +74,9 @@ export default class DataProviderService extends ServiceModule {
                     }
                 };
             }
-        } else {
-            this.logger.log(`method "${request.method}" not allowed`);
-            return {status: 405};
         }
+        this.logger.log(`method "${request.method}" not allowed`);
+        response.setStatusCode(405).send();
     }
 
     #getResponseData(sort, page, pageSize, filter) {
