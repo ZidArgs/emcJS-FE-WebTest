@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
+import {parseJSON} from "@emcjs/core/util/json/JSON.js";
 import ServiceModule from "jswebservice/ServiceModule.js";
 import {extractData} from "@emcjs/core/util/helper/collection/ExtractDataFromArray.js";
 import {
     isArrayOf, isDict
 } from "@emcjs/core/util/helper/CheckType.js";
-import jsonParse from "@emcjs/core/patches/JSONParser.js";
 
 export default class DataProviderService extends ServiceModule {
 
@@ -29,7 +29,7 @@ export default class DataProviderService extends ServiceModule {
             if (stat.isFile(resolvedFilePath)) {
                 const input = fs.readFileSync(resolvedFilePath).toString();
                 try {
-                    const data = jsonParse(input);
+                    const data = parseJSON(input);
                     if (isArrayOf(data, (e) => isDict(e))) {
                         this.#baseData = data;
                     } else {

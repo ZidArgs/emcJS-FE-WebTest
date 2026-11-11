@@ -1,6 +1,6 @@
 // Origin Private File System
 
-import jsonParse from "@emcjs/core/patches/JSONParser.js";
+import {parseJSON} from "@emcjs/core/util/json/JSON.js";
 
 const rootDirHandle = await navigator.storage.getDirectory();
 
@@ -31,7 +31,7 @@ export async function readData(namespace, filename) {
     const fileHandle = await namespaceHandle.getFileHandle(filename + ".json");
     const file = await fileHandle.getFile();
     const data = await file.text();
-    return jsonParse(data);
+    return parseJSON(data);
 }
 
 export async function removeData(namespace, filename) {
